@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
       	<title>Larissa Camyle | Contato</title>
 
-	<link href="google.svg" rel="icon">
+	<link href="logo-pagina.svg" rel="icon">
 
 	<!--responsividade em celulares-->
 	<meta	name="viewport" content="width=device-width">
@@ -15,18 +15,50 @@
 	<!-- SITE DE PORTFOLIO https://edrodrigues.com.br/-->
   </head>
 
-<body>
-     <hr id="borda" class="cabecalho-borda">
-     <header class="cabecalho">
+<body id="body">
+
+   <main id="borda" class="conteudo">	
+     	<hr id="bordaCabecalho" class="cabecalho-borda">
+     	<header id="cabecalho" class="cabecalho">
 		<div class="cabecalho-logo">L</div>
 		<div class="cabecalho-texto">
 			<div id="texto1" class="cabecalho-texto-escrito"><a href="index.html">Home</a></div>
 			<div id="texto2" class="cabecalho-texto-escrito"><a href="contato.html">Contato</a></div>
+			<div id="temaDiv" class="cor-tema">
+				<div id="buttonLeft" class="button-left left">☀︎</div>
+				<div id="buttonRight" class="button-right right">☀︎</div>
+			</div>
 		</div>
-     </header>
+     	</header>
+
+	<div class="conteudo-contato-logo">
+		<div class="conteudo-logo">
+			<img class="imagem-contato" src="teste-png" >
+			<div id="brancoTexto3" class="conteudo-logo-texto">xxxxxx</div>
+			<div id="hrContato" class="conteudo-logo-hr"></div>
+		</div>
+	</div>
 
 
+		<form class="formulario" action="https://formsubmit.co/6c6ba3bf2fa869f4fe57565775b249d3" method="POST">
+			<div id="brancoTexto4" class="conteudo-contato-texto">Nome:</div>
+			<input id="inputContato1" type="text" name="name" placeholder="Digite seu nome" required>
+			<div id="brancoTexto5" class="conteudo-contato-texto">Email:</div>
+			<input id="inputContato2" type="email" name="email" placeholder="Digite seu email" required>
+			<div id="brancoTexto6" class="conteudo-contato-texto">Mensagem:</div>
+			<textarea id="inputContato3" cols="30" rows="10" type="text" name="message" class="inputMensagem" id="message" placeholder="Digite sua Mensagem" required></textarea>
+			<button id="buttonEnviar" class="buttonEnviar" type="submit">Enviar</button>
 
+			<input type="hidden" name="_subject" value="Novo Contato!">
+			<input type="hidden" name="_next"  value="thanks.html">
+			<input type="hidden" name="_captcha" value="false"><!--retirar o captcha-->
+			<input type="text" name="_honey" style="display:none"> <!--evitar que o email vá como spam-->
+		</form>
+	
+			
+	   	
+	</div>
+    </main>
 </body>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="scriptContato.js"></script>
 </html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Righteous&family=Rouge+Script&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 html, body{
 	width: 100%;
@@ -17,7 +18,7 @@ a{
 
 .conteudo{
 	border: 7px solid rgb(224 238 255);
-    	height: 98%;
+    	height: 99%;
     	overflow: auto;
     	scrollbar-width: none;
 }
@@ -71,7 +72,6 @@ a{
 	border-radius: 0px 0px 20px 20px;
 	color: rgb(237 249 255);
 	cursor: pointer;
-
 }
 
 
@@ -93,26 +93,39 @@ button {
 	border-radius: 50%;
 	margin: 5%;
 	border: none;
+	width: 25px;
 	padding: 5px;
 	background: rgb(224 238 255);
 }
 
 #buttonRight{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	visibility: hidden;
-	margin-left: 20px;
+	margin-left: 10px;
 	background-color: #0f58a4;
-	color: black;
-	font-size: 15px;
+	color: rgb(255, 255, 255);
+	font-size: 19px;
+	padding-bottom: 2% ;
 	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	
 }
 
 #buttonLeft{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-left: 10px;
 	background: rgb(224 238 255);
-	color: white;
+	color: rgb(0, 0, 0);
 	visibility: visible;
-	font-size: 15px;
+	font-size: 19px;
 	border-radius: 50%;
+	width: 25px;
+	height: 25px;
 }
 
 @keyframes opacity{
@@ -154,7 +167,9 @@ button {
 					font-size: 13px;
 					gap: 10px;
 				}
-			
+				.cabecalho-texto-escrito:hover {
+					width: 60px;
+				}
 		}
 
 		@media screen and (min-width: 300px) and (max-width: 450px){
@@ -196,8 +211,8 @@ button {
 	justify-content: center;
 	font-family: "VT323", monospace;
 	color: white;
-	font-size: 75px;
-	animation: titulo-web-desenvolvimento 0s infinite linear alternate;
+	font-size: 65px;
+	animation: titulo 0s infinite linear alternate;
 	height: 200px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -205,36 +220,40 @@ button {
 	padding: 5%;
 }
 
-@keyframes titulo-web-desenvolvimento{
+@keyframes titulo-escuro{
 	0%{
-		color: #c1d0ff;
-		margin-top: 10%;
+		color: #ffffff;
+		margin-top: 7%;
 		margin-bottom: 0%;
-	}
-	15%{
-		color: #d4c5ff;
-	}
-	30%{
-		color: #ffc1ff;	
-		margin-top: 0%;
-		margin-bottom: 5%;
-	}
-	45%{
-		color: #c1fff4;	
-
-	}
-	60%{
-		color: #ffc2c1;	
-		margin-top: 10%;
-		margin-bottom: 0%;
-	}
-	75%{
-		color: #fee2c6;
 	}
 	100%{
-		color: #fdfec6;
+		color: #6fbcff;
 		margin-top: 0%;
-		margin-bottom: 5%;
+		margin-bottom: 7%;
+	}
+}
+
+@keyframes titulo-claro{
+	0%{
+		color: #00276e;
+		margin-top: 7%;
+		margin-bottom: 0%;
+	}
+	100%{
+		color: #3b93de;
+		margin-top: 0%;
+		margin-bottom: 7%;
+	}
+}
+
+@keyframes titulo {
+	0%{
+		margin-top: 10%;
+		margin-bottom: 0%;
+	}
+	100%{
+		margin-bottom: 20%;
+		margin-top: 0%;
 	}
 }
 
@@ -242,7 +261,7 @@ button {
 			/*CELULAR ------------------------------------------------- */
 			@media screen and (max-width: 260px){
 				.web-desenvolvimento{
-					height: 250px;
+					height: 180px;
 					margin-top: 100px;
 				}
 				
@@ -250,12 +269,22 @@ button {
 					font-size: 32px;
 				    letter-spacing: 1px;
 				}
+				@keyframes titulo {
+					0%, 40%, 80%{
+						margin-top: 20%;
+						margin-bottom: 0%;
+					}
+					20%, 60%, 100%{
+						margin-bottom: 20%;
+						margin-top: 0%;
+					}
+				}
 				
 			}
 
 			@media screen and (min-width: 260px) and (max-width: 310px){
 				.web-desenvolvimento{
-					height: 250px;
+					height: 200px;
 					margin-top: 100px;
 				}
 				
@@ -263,18 +292,38 @@ button {
 					font-size: 38px;
 				    letter-spacing: 1px;
 				}
+				@keyframes titulo {
+					0%, 40%, 80%{
+						margin-top: 20%;
+						margin-bottom: 0%;
+					}
+					20%, 60%, 100%{
+						margin-bottom: 20%;
+						margin-top: 0%;
+					}
+				}
 				
 			}
 	
 			@media screen and (min-width: 310px) and (max-width: 400px){
 				.web-desenvolvimento{
-					height: 250px;
+					height: 220px;
 					margin-top: 100px;
 				}
 				
 				.web-desenvolvimento-titulo{
 					font-size: 40px;
 				    letter-spacing: 3px;
+				}
+				@keyframes titulo {
+					0%, 40%, 80%{
+						margin-top: 20%;
+						margin-bottom: 0%;
+					}
+					20%, 60%, 100%{
+						margin-bottom: 20%;
+						margin-top: 0%;
+					}
 				}
 				
 			}
@@ -290,6 +339,16 @@ button {
 						font-size: 50px;
 					    letter-spacing: 3px;
 					}
+					@keyframes titulo {
+						0%, 40%, 80%{
+							margin-top: 20%;
+							margin-bottom: 0%;
+						}
+						20%, 60%, 100%{
+							margin-bottom: 20%;
+							margin-top: 0%;
+						}
+					}
 				}
 			}
 	
@@ -301,7 +360,17 @@ button {
 					}
 				
 					.web-desenvolvimento-titulo{
-						font-size: 60px;
+						font-size: 55px;
+					}
+					@keyframes titulo {
+						0%, 40%, 80%{
+							margin-top: 20%;
+							margin-bottom: 0%;
+						}
+						20%, 60%, 100%{
+							margin-bottom: 20%;
+							margin-top: 0%;
+						}
 					}
 				}
 			}
@@ -314,7 +383,7 @@ button {
 					}
 				
 					.web-desenvolvimento-titulo{
-						font-size: 70px;
+						font-size: 60px;
 					}
 				}
 			}
@@ -332,7 +401,7 @@ button {
 .imagem-pessoal{
 	height: 100px;
     	border-radius: 50%;
-    	border: 5px solid rgb(218 231 255);
+    	border: 2px solid rgb(218 231 255);
 }
 
 .descritivo-imagem{
@@ -357,20 +426,19 @@ button {
 	color: white;
 }
 
-.descritivo-texto{
+.descritivo-texto-introducao{
 	justify-content: center;
 	width: 60%;
 	margin-left: 5%;
 	animation: opacity 0.6s linear alternate;
 }
 
-.descritivo-texto-escrito{
+.descritivo-texto-introducao-escrito{
 	font-family: "Quicksand", sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	text-align: justify;
 	color: white;
 }
-
 
 			/*CELULAR ------------------------------------------------- */
 	
@@ -391,6 +459,9 @@ button {
 				.descritivo-texto{
 					width: 80%;
 					margin-left: 10%;
+				}
+				.descritivo-texto-escrito{
+					font-size: 11px;
 				}
 					@keyframes updown{
 						0%{
@@ -422,7 +493,9 @@ button {
 					.descritivo-texto{
 						width: 80%;
 						margin-left: 10%;
-
+					}
+					.descritivo-texto-escrito{
+						font-size: 13px;
 					}
 					@keyframes updown{
 						0%{
@@ -457,6 +530,9 @@ button {
 						font-size: 17px;
 						animation: updown 0.6s linear alternate;
 					}
+					.descritivo-texto-escrito{
+						font-size: 14px;
+					}
 					@keyframes updown{
 						0%{
 							margin-top: 10%;
@@ -489,6 +565,9 @@ button {
 						margin-left: 8%;
 						animation: updown 0.6s linear alternate;
 					}
+					.descritivo-texto-escrito{
+						font-size: 15px;
+					}
 					@keyframes updown{
 						0%{
 							margin-top: 10%;
@@ -503,7 +582,155 @@ button {
 			}
 
 
+/*info pessoais----------------------------------*/
+
+.descritivo-info-pessoais{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.descritivo-info-pessoais-container{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.descritivo-info-pessoais-escrito{
+	font-family: "Comic Neue", cursive;
+	font-size: 17px;
+	color: white;
+}
+
+.descritivo-info-pessoais-destaque{
+	font-family: "Comic Neue", cursive;
+	font-size: 17px;
+	color: rgb(147 200 255);
+}
 
 
-/*//////////////////////////////////////////////////////////////////SITE CONTATOS*/
 
+
+
+
+/*///////////////////////////////////////////////////////////////CONTATO*/
+
+
+.conteudo-contato-logo{
+	display: flex;
+	justify-content: center;
+	margin: 0% 10% 10% 10%;
+	margin-top: 100px;
+}
+
+.conteudo-logo{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.conteudo-logo-hr{
+    width: 200px;
+    text-decoration: none;
+    border: 1px solid #c3e3ff;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.imagem-contato{
+	display: flex;
+	justify-content: center;
+	width: 50px;
+}
+
+input, textarea{
+	background: rgb(191 207 231);
+    	height: 35px;
+    	border: 4px solid rgb(255 255 255);
+    	border-radius: 3px;
+    	width: 100%;
+    	font-size: 16px;
+    	color: #001049;
+    	font-family: "Quicksand", sans-serif;
+	padding: 0.5%;
+}
+
+textarea{
+	height: 100px;
+}
+
+.formulario{
+	width: 90%;
+	margin-top: 50px;
+	margin-left: 4%;
+}
+
+.conteudo-contato-texto{
+	color: white;
+    	margin: 1%;
+    	font-size: 18px;
+    	font-family: monospace;
+}
+
+.conteudo-logo-texto{
+	display: flex;
+	justify-content: center;
+    font-family: 'Righteous';
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.buttonEnviar {
+    background: rgb(162 199 241);
+    box-shadow: 2px 4px 3px rgb(255 255 255 / 6%);
+    color: rgb(0 31 61);
+    border-style: none;
+    border-radius: 10px;
+    font-family: "Righteous", sans-serif; 
+    font-size: 17px;
+    width: 80px;
+    padding: 4px;
+	margin: 2%;
+}
+
+.buttonEnviar:hover {
+    	background: rgb(159 199 245);
+	transform: scale(1.1);
+
+}
+
+
+
+		@media screen and (max-width: 300px){
+			input, textarea, .conteudo-contato-texto{
+				font-size: 13px;
+			}
+			.conteudo-contato-texto{
+			    font-size: 14px;
+				margin: 2%;
+			}
+		}
+		
+		@media screen and (min-width: 300px) and (max-width: 500px){
+			input, textarea{
+				font-size: 15px;
+			}
+			.conteudo-contato-texto{
+			    font-size: 16px;
+				margin: 2%;
+			}
+		}
+
+		@media screen and (min-width: 1000px){
+			.formulario{
+				width: 70%;
+				margin-left: 15%;
+			}
+
+		}
+
+		@media screen and (max-width: 1000px){
+			input, textarea{
+				padding: 1%;
+			}
+		}
